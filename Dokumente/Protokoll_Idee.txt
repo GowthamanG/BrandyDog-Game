@@ -1,0 +1,27 @@
+Eine Nachricht wird wie folgt aufgebaut:
+
+LokaleAdresse;Behfehl;Argument0;Argument1;...;END
+
+-Die (eigene) Lokale Adresse identifiziert den Spieler bzw. Server.
+-Der Befehl ist das Kernstück (mehr unten)
+-Argumente sind je nach Befehl unterschiedlich: Welcher Spieler, welche Figur, Welche Karte, Welches Feld...
+-END markiert das Ende der Message. So geht hoffentlich nichts verloren.
+
+Hier eine beispielhafte Liste mit möglichen Befehlen und Argumenten
+
+set;X;Y;Z;			//Spieler X, Figur Y auf Feld Z setzen
+arrived;X;Y;		//Spieler X, Figur Y hat das Ziel erreicht
+drawCard;A;			//Karte A ziehen
+swapCard;A;			//gib dem Partner die Karte A
+playCard;A;			//Spieler X spielt Karte A
+endTurn;X;			//Spieler X beendet seine Runde (je nach implementation nicht notwendig?)
+arrived;X;			//alle Figuren von Spieler X haben das Ziel erreicht (X hilft nur noch partner)
+win;X;Y;			//Spieler X und Y gewinnen das Spiel
+lose;X;Y;			//Spieler X und Y verlieren das Spiel
+no;					//Der Spielzug wird vom Server nicht akzeptiert (Illegaler Zug, fehlerhafte Argumente...)
+chat;S;				//"S" im Chat schreiben
+quit;				//das Spiel verlassen
+
+//Weitere Überlegungen
+- Wie werden fehlende/korrupte Packets behandelt/korrigiert?
+- Wie wird der fehlerfreie Empfang bestätigt?

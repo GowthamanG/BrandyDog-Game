@@ -1,0 +1,101 @@
+﻿Tagebuch: Programmierprojekt FS17, Spiel "Brändi Dog", Gruppe 06
+
+23.02.2017:
+Gruppe hat sich während der Vorlesung gebildet. Gespräche über Spiel begonnen, mehrere Möglichkeiten wurden vorgestellt.
+Schon von Anfang an war uns klar, dass ein rundenbasiertes Spiel sinnvoller wäre für das erste Projekt, um grosse Probleme
+zu vermeiden. Die Ideen waren: Risiko, Billiard, Battleships, Bingo, Uno, Dog-Royal, Cluedo. Cedrik kam mit der Idee
+das bekannte Brettspiel "Brändi Dog" zu implementieren. Diese Idee gefiel uns allen gut und haben und dann für dieses.
+Spiel entschieden.
+
+01.03.2017:
+Die Gruppe hat die Präsentation für den Meilenstein 1 vorbereitet. Ziel des Projekts: Implementierung des Brettspiels "Brändi Dog".
+Die Präsentation wurde rechtzeitig gegen 17 Uhr auf die Git-Repository hochgeladen.
+
+03.03.2017:
+Meilenstein 1 wurde erfolgreich überstanden. Feedback: Projektplan konkreter planen.
+Nach der Vorlesung haben wir abgemacht, dass Gowthaman und Michel über das Wochenende sich mit dem
+Netzwerkprotokoll auseinanderzusetzen, während Cedrik und Benjamin sich um den Client-Server Architektur
+kümmerten.
+
+06.03.2017:
+Gowthaman & Michel erstellen eine erste Outline/Draft eines Netzwerkprotokolls.
+
+13.03.2017:
+Gowthaman hat einfache Java-Files "Server" und "Client" erstellt, welche im ersten Schritt eine Verbindung herstellt.
+Diese Files werden für das Projekt weiter ausgebaut. Recherchiert wurde vor allem im Internet und im Buch
+"Java 8, Das Handbuch".
+
+18.03.2017:
+Cedrik und Benjamin haben am client server chat gearbeitet. Wir mussten uns zuerst mit der Client-Server-Struktur auseinander setzen.
+Das GUI wurde auch angefangen, einfach ein window mit 2 panels.
+
+25.03.2017:
+Wir haben alle den Client-Server-Chat auf unseren eigenen Computern getestet und funktionierte problemlos. Alle mussten
+im gleichen WLAN anmelden.
+
+29.03.2017:
+Client-Server-Architektur wurde nochmals in der Übungsstunde getestet. Alle haben sich im Unibas-public WLAN angemeldet.
+Auf Eduroam funktionierte es nicht, weil dieses WLAN Einschränkungen hat.
+Meilenstein 2 wurde überstanden. Feedback: Konzept für Qualitätssicherung planen
+
+03.04.2017:
+Die nächsten Aufträge bis zum Meilenstein 3 wurden endgültig aufgeteilt. Mehr Details siehe PDF.
+
+05.04.2017:
+Benjamin Park hat die Form des GUI erstellt und arbeitet daran, es mit dem chat zu verbinden.
+
+06.04.2017:
+Gowthaman hat den ersten Manual Dokument erstellt. Dies enthält alle wichtigen Regeln zum Spiel und dient der Gruppe
+auch, das Spiel entsprechend zu entwickeln.
+
+10.04.2017:
+Michel hat das Game-Protokoll auf den neuesten Stand gebracht und sämtliche Befehle des Chat- und Game-Protokolls mit javadoc Kommentaren versehen.
+Bezüglich des Protokolls muss sich das Team nur noch um ein paar Details kümmern, die sich im Rahmen der Spielimplementation klären werden (zum Beispiel: Speichern wir die Figuren aller Spieler separat oder in der selben Variablen.).
+
+16.04.2017:
+Gowthaman hat in Client.java eine Liste implementiert, in welche alle Namen gespeichert werden, welche momentan mit dem Server verbunden sind.
+
+19.04.2017:
+Benjamin Park hat den Hauptteil der Spielelogik implementiert, jedoch gab es Probleme bei herstellen der Verbindung zwischen Spielern. Wir haben die Präsentation für den Meilenstein
+3 erstellt und den Chat ins GUI gepackt. Die Zeit hat uns gedrängt, trotzdem konnten wir noch vor dem Deadline fast alles noch hochladen.
+
+21.04.2017: 
+Wir hatten die Präsentation Meilenstein 3 im Plenum. Das Feedback war betreffend der Softwarequalitätssicherung. Bei Funktionalität Indikator "einwandfreier Client-Server-Architektur" wurde uns gesagt, dass ich noch genauer definieren 
+sollten, was wir genau da messen wollen. Unsere Idee war, dass wir den Client-Server-Verbindung so aufbauen, dass der Client auch nach einem unabsichtlichen Unterbruch wieder automatisch verbinden kann, ohne endgültig das Spiel zu 
+verlassen (mit einer reconnect() Methode zum Beispiel). Das Vorzeigen des Spiels folgt noch in der kommende Übungsstunde.
+
+26.04.2017:
+Heute mussten wir den die Programme vorzeigen. Jedoch gab es schon am Anfang Probleme mit der Client-Server Verbindung, es gab uns einen NullPointerException aus, dem wir unbedingt nachgehen werden, beim builden des 
+Gradle-Projekts habe es keine jar Datei aus. Ausserdem konnten wir das Spiel selber nicht vorzeigen, weil wir es nicht im Repository hochgeladen haben. Wir haben leider eine nicht so gute Bewertung erhalten. 
+Wir werden in den kommenden Tagen uns sehr bemühen, das Spiel weiter gut zu entwickeln, alle negativen Punkte zu verbessern, damit wir im Meilenstein 4 noch ordentlich viel Punkte holen können. 
+
+01.04.2017:
+Benjamin Park hat die verschiedenen Karten klassen neu gemacht. Suits wurden hinzugefügt und mehrere Veränderung beim erstellen eines decks/blatt wurden gemacht. Die Spielelogik wurde auch erweitert, und die Spieleregeln teilweise implementiert.
+
+07.05.2017:
+Ich haben uns in den letzen drei Tagen im Institut und in der UniBibliothek getroffen. Wir haben den Stand der Aufgaben von jedem besprochen, und was noch notwändig war bis Montag. Benjamin beschäftigte sich mit
+der Implementierung des Spielbretts, und das die Spielregeln fehlerfrei laufen. Michel mit dem Unit Test und hat auch Benjamin geholfen. Cedrik hat die Chat-Lobby neu gestaltet mit JavaFX und erstellte das GameThread. Gowthaman hat 
+die Spielgrafik mit JavaFX erstellt. Wir alle haben grosse Fortschritte gemacht und alles sieht gut aus für den Meilenstein 4.
+
+10.05.2017: Heute fand der Meilenstein 4 in den Übungsgruppen statt. Ich haben unseren Stand vorgezeigt, jedoch gab es diesmal auch wieder Probleme. Der Unit Test war nicht zufriedenstellend und beim Code gab es auch
+Reklamationen. Wir haben 9/25 Punkte bekommen. Wir haben uns jetzt vorgenommen für den Meilenstein 5 das Beste zu geben und ein gutes Endprodukt & Präsentation zu liefern.
+
+10.05.2017:
+Benjamin Park hat die play methode von einem void zu einem boolean geändert und es umbenannt auf validMove, Pläne für den nächsten Meilenstein wurden verfeinert. 
+
+18.05.2017:
+Die Sound-Effekte für das Spiel wurden erstellt mit Logic Pro, wobei darauf Acht gegeben wurde, dass sie nicht das Urheberrecht verletzen.
+
+20.05.2017: Heute haben wir das Spiel getestet. Der Server-Client System funktionierte sehr gut. Das Game konnten wir spielen, jedoch waren noch einige Fehler drinnen, welche Michel im Test Testing log Dokument ausführlich beschrieben hat. 
+
+20.05.2017:
+Benjamin hat Cedrik mit dem mediaplayer und audioclip von javafx geholfen für die Sound effekte und das Intro.
+
+21.05.2017:
+Heute ist das Fertigstellen des Spiels und der Dokumentation angesagt.
+Benjamin hat das Intro fertig gestellt, es benutzt ein klassisches stück (out of copyright) mit einer video montage, die er selbst erstellt hat. Wie bei den Sound-Effekten wurde dafür logic pro gebraucht, aber 
+auch eine Video-Editing Software.
+Cedrik hat an der GameThread Klasse gearbeitet. 
+Gowthaman hat für das Game eine neues Brett mit besser Auflösung gestaltet und das Handbuch geschrieben.
+Michel hat die JUnit Test Klassen an die veränderte Gamelogik angepasst. In den letzen Wochen hat er die Führung über die Softwarequalitätsicherungsmassnahmen übernommen und weitere Tests durchgeführt und dokumentiert. Ausserdem hat er die Programmarchitektur graphisch und textlich beschrieben und dokumentiert.
+Crunch Time macht sich bemerkbar: Das Team arbeitet bis spät in die Nacht, um die letzten Stunden vor der Deadline noch fürs Bugfixing verwenden zu können. Wir sind mit dem Endprodukt schon fast zufrieden, es fehlt nur noch der letzte Feinschliff...

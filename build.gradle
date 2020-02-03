@@ -1,0 +1,37 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    testCompile "junit:junit:4.12"
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'BDGame/src'
+        }
+        resources {
+            srcDir 'BDGame/resources'
+        }
+    }
+    test {
+        java {
+            srcDir 'BDGame/test'
+        }
+    }
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'bdgame.apps.client.Main'
+        )
+    }
+}
+
+task 'build-cs108' {
+    finalizedBy javadoc, build
+    clean.execute()
+}

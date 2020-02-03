@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0"
+            prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="bdgame.apps.client.GUI.LobbyGUIController">
+    <TextField fx:id="clientMessageArea" layoutX="14.0" layoutY="466.0" onKeyPressed="#handleEnterPressed"
+               prefHeight="120.0" prefWidth="487.0"/>
+    <TabPane fx:id="chatTabs" layoutY="28.0" prefHeight="431.0" prefWidth="596.0">
+        <Tab fx:id="serverChatTab" closable="false" onSelectionChanged="#clickedOnServerChatTab" text="Server">
+            <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="588.0">
+                <TextArea id="serverTextArea" fx:id="serverMessageArea" editable="false" layoutX="14.0"
+                          prefHeight="402.0" prefWidth="486.0" wrapText="true" AnchorPane.bottomAnchor="0.0"
+                          AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="96.0"
+                          AnchorPane.topAnchor="0.0"/>
+            </AnchorPane>
+        </Tab>
+        <Tab fx:id="lobbyChatTab" text="Lobby">
+            <AnchorPane fx:id="lobbyAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="402.0"
+                        prefWidth="395.0">
+                <TextArea fx:id="lobbyMessageArea" editable="false" layoutX="13.0" prefHeight="402.0"
+                          prefWidth="487.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="13.0"
+                          AnchorPane.rightAnchor="96.0" AnchorPane.topAnchor="0.0"/>
+                <ToggleButton fx:id="toggleReadyButton" layoutX="516.0" layoutY="297.0" mnemonicParsing="false"
+                              onAction="#toggleReady" text="Ready?"/>
+            </AnchorPane>
+        </Tab>
+    </TabPane>
+    <MenuBar onMouseDragged="#mouseDragsMenuBar" onMousePressed="#mousePressedOnMenuBar"
+             prefHeight="28.000106811523438" prefWidth="800.0">
+        <Menu mnemonicParsing="false" text="Client">
+            <MenuItem fx:id="ConnectMenuItem" mnemonicParsing="false" onAction="#clickedConnectItem"
+                      text="Connect..."/>
+            <MenuItem fx:id="NicknameMenuItem" mnemonicParsing="false" onAction="#clickedNicknameItem"
+                      text="Change Nickname"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem fx:id="CloseMenuItem" mnemonicParsing="false" onAction="#clickedCloseItem" text="Close"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Game">
+            <RadioMenuItem fx:id="gameFullscreen" mnemonicParsing="false" text="Fullscreen"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Server">
+            <MenuItem fx:id="ScoreboardMenuItem" mnemonicParsing="false" onAction="#clickedScoreboardItem"
+                      text="Scoreboard"/>
+            <MenuItem fx:id="InfoMenuItem" mnemonicParsing="false" onAction="#clickedInfoItem" text="Info"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem fx:id="createLobbyMenuItem" mnemonicParsing="false" onAction="#clickedCreateLobbyItem"
+                      text="Create Lobby"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+            <MenuItem mnemonicParsing="false" onAction="#clickedOnLobbyUsageMenu" text="Lobby Usage"/>
+        </Menu>
+    </MenuBar>
+    <TabPane layoutX="592.0" layoutY="28.0" prefHeight="556.0" prefWidth="208.0" tabClosingPolicy="UNAVAILABLE">
+        <Tab onSelectionChanged="#usersSelected" text="Users">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <ListView fx:id="UsersList" layoutX="4.0" layoutY="36.0" prefHeight="527.0" prefWidth="208.0"
+                          AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+            </AnchorPane>
+        </Tab>
+        <Tab fx:id="lobbiesTab" onSelectionChanged="#lobbiesSelected" text="Lobbies">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="527.0" prefWidth="189.0">
+                <TreeView fx:id="LobbyTreeView" editable="true" layoutX="4.0" prefHeight="527.0"
+                          prefWidth="208.0" showRoot="false" AnchorPane.bottomAnchor="0.0"
+                          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+            </AnchorPane>
+        </Tab>
+    </TabPane>
+</AnchorPane>
